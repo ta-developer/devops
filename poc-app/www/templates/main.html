@@ -1,0 +1,69 @@
+<ion-view view-title="" style="background: none !important; background-color: none !important;">
+
+<ion-content id="ed-reg" style="background: url('img/building.jpg') top center;">
+
+<div ng-controller="MainCtrl" data-ng-hide="!userLoggedIn();">
+
+	<button  hidden="true" menu-toggle="left" name="head" style="display: inline !important; color: #fff; font-size: 12px; padding-left: 15px;" class="button button-icon icon ion-navicon">
+	   <span style="margin-left: 10px;">MENU</span>
+	</button>
+
+</div>
+
+<div class="row row-center">
+	<div class="col col-80 col-offset-10">
+		<img src="img/poc-logo.png"
+			style="margin: 0 auto; text-align: center; width: 100%;">
+	</div>
+</div>
+
+<div id="e-services">
+
+	<div class="row">
+
+		<div class="col col-33 component">
+			<button class="mainbutton">
+				<span class="ion ion-card component-icon"></span>
+				<h3>Feature 1</h3>
+			</button>
+		</div>
+		<div class="col col-33 component">
+			<button class="mainbutton" ng-controller="MainCtrl"
+				ng-click="usageCalculator()">
+				<span class="ion ion-calculator component-icon"></span>
+				<h3>Feature 2</h3>
+			</button>
+		</div>
+		<div class="col col-33 component">
+			<button class="mainbutton" ng-controller="MainCtrl"
+				ng-click="usageCalculator()">
+				<span class="ion ion-ios-bolt component-icon"></span>
+				<h3>Feature 3</h3>
+			</button>
+		</div>
+
+	</div>
+	<!--/List Card-->
+</div>
+
+<div class="row row-center" data-ng-hide="userLoggedIn()">
+	<!--Sign up button-->
+	<div class="col col-80 col-offset-10">
+		<div class="">
+			<button
+				class="button button-positive button-clear ed-signin_btn icon-right ion-ios-locked-outline"
+				ng-click="submitForm();" type="submit" ng-controller="MainCtrl">
+				SIGN IN <i class="ion-android-arrow-forward icon-right"
+					style="margin-right: 5px;"></i>
+			</button>
+		</div>
+	</div>
+</div>
+<div class="row row-center" style="margin-top: 5px;" data-ng-hide="userLoggedIn()">
+	<div class="col col-center ed-center"
+		style="font-weight: bold; color: #fff" ng-click="register();">REGISTER</div>
+</div>
+
+
+</ion-content> 
+</ion-view>

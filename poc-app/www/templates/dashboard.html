@@ -1,0 +1,15 @@
+
+<ion-view view-title="Dashboard" >
+<ion-content id="db_page" padding="true" has-bouncing="true">
+    <!-- <div id = "cardsLoading" style = "text-align:center; margin-top:30px;">
+    		<ion-spinner icon="android" class = "cardSpinner" id = "dashboardSpinner"></ion-spinner>
+    		<h4> Fetching Some Cards for You </h4></div>
+    </div> -->
+<div id = "cardsLoading" style = "text-align:center; margin-top:110px;">
+    <ion-refresher on-refresh="refresh_data()" refreshing-text="Fetching Cards" pulling-text="Pull to Refresh Data" >
+     </ion-refresher>
+    <div id = "db_page_cards">
+    </div>
+</div>
+</ion-content>
+</ion-view>

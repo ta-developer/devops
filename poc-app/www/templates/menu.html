@@ -1,0 +1,97 @@
+<ion-side-menus>
+  <ion-side-menu-content>
+    <!-- <ion-nav-bar class="bar-stable">
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar> -->
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <!-- Left menu -->
+  <ion-side-menu side="left" class="ed-menu-left">
+
+      <ion-content id="ed-sidebar" ng-controller="menuController">
+          <div class="row profile-pic">
+            <img src="http://placehold.it/100x100">
+          </div>
+
+          <h4>Welcome {{userInfo.username}}</h4>
+          <h4 class="notifs">Notifications (0)</h4>
+
+            <div class="row icon-right" id="flip">
+                <div class="col">
+                    <h3 class="active">{{defaultAlias}}</h3>
+                    <h3 class="active">SIN: {{defaultSin}}</h3>
+                </div>
+                 <div class="col-10 col-center">
+                    <span><i class="ion-android-arrow-dropdown"></i></span>
+                </div>
+            </div>
+            <div id="panel" class="">
+                <div id="rest" class="ed-removeaccount" style="padding: 1px 20px; ">
+                    <span style="float: right; display: iline-block;"><i class="ion-minus-circled"></i></span>
+                    <h3>Remove this account</h3>
+                </div>
+                <div class="col panel-wrap">
+                    <h4>Other enrolled account(s):</h4>
+                    
+                    <div ng-repeat="serviceInfo in userInfo.serviceIds">
+	                    <label class="item item-radio">
+	                        <input type="radio" name="group" id="radioId" ng-click="selectAccount('{{serviceInfo.sin}}','{{serviceInfo.alias}}');">
+	                        <div id="item-content" class="item-content">
+	                            <h3>{{serviceInfo.alias}}</h3>
+	                            <h3>SIN: {{serviceInfo.sin}}</h3>
+	                        </div>
+	                        <i class="radio-icon ion-checkmark"></i>
+	                    </label>
+                    </div>
+                    <div menu-close class="ed-addaccount" style="">
+                    <span style="float: right; display: iline-block;"><i class="ion-plus-circled"></i></span>
+                    <h3>Enroll NEW account</h3>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="list">
+			  
+			  <div>
+	              <a menu-close class="item item-icon-left" href="#">
+	                  <i class="icon ion-card"></i>
+	                  Menu 1
+	              </a>
+              </div>
+
+              <a menu-close class="item item-icon-left" href="#">
+                  <i class="icon ion-arrow-graph-down-right"></i>
+                  Menu 2
+              </a>
+
+              <a menu-close class="item item-icon-left" href="#">
+                  <i class="icon ion-ios-bolt-outline"></i>
+                  Menu 3
+              </a>
+
+              </div>
+
+              <div class="list menu2" style="text-align: center;">
+                <a href="" class="item item-icon-left"><i class="icon ion-ios-telephone"></i> About the App</a>
+                <a href="" class="item item-icon-left"><i class="icon ion-gear-a"></i> Settings</a>
+                <a href="" class="item item-icon-left"><i class="icon ion-log-out"></i> Logout</a>
+              </div>
+
+      <script> 
+            $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#panel").slideToggle();
+                });
+            });
+      </script>        
+
+      </ion-content>
+  </ion-side-menu>
+
+
+</ion-side-menus>

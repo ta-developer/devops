@@ -1,0 +1,72 @@
+<ion-modal-view>
+<ion-content id="ed-reg" padding="false" has-bouncing="false" class="ed-reg_bg">
+
+<div ng-controller="RegistrationController">
+    <button class="button exitbutton" ng-click="exit()">
+            	<span class="ion-ios-close-empty" style="color: #fff;"></span></button>
+</div>
+    <div class="row row-center">
+    	<div class="col col-80 col-offset-10"><img src="img/poc-logo.png" style="margin: 0 auto; text-align: center; width: 100%;"></div>
+    </div>
+
+	<div class="list ed-reg_form">
+		<form name="registrationForm" ng-submit="processRegister();" ng-controller="RegistrationController">
+	        <div class="row row-center"><!--Username-->
+	            <div class="col col-80 col-offset-10">
+	                <div class="">
+	                    <label class="item item-input">
+	                    	<span><i class="ion-person" style="margin-right: 15px;"></i></span>
+	                    	<input type="text" placeholder="Username" ng-model="User.username" ng-required="true">
+	                    </label>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="row row-center"><!--Email-->
+	            <div class="col col-80 col-offset-10">
+	                <div class="">
+	                    <label class="item item-input">
+	                    	<span><i class="ion-person" style="margin-right: 15px;"></i></span>
+	                    <input type="text" placeholder="Email address" ng-model="User.email" ng-required="true">
+	                    </label>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="row row-center"><!--Password-->
+	            <div class="col col-80 col-offset-10">
+	                <div class="">
+	                    <label class="item item-input">
+	                    	<span><i class="ion-locked" style="margin-right: 15px;"></i></span>
+	                    	<input type="password" placeholder="Password" ng-model="User.password" ng-required="true">
+	                    </label>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="row row-center"><!--Re-enter Password-->
+	            <div class="col col-80 col-offset-10">
+	                <div class="">
+	                    <label class="item item-input">
+	                    	<span><i class="ion-locked" style="margin-right: 15px;"></i></span>
+	                    	<input type="password" placeholder="Re-enter Password" ng-required="true">
+	                    </label>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="row row-center"><!--Sign up button-->
+	            <div class="col col-80 col-offset-10">
+	                <div class="">
+	                	<button class="button button-positive button-clear ed-reg_btn icon-right ion-ios-locked-outline" type="submit">
+				        	SIGN UP <i class="ion-android-arrow-forward icon-right" style="margin-right: 5px;"></i>
+				      	</button>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="row" style="margin-top: 5px;">
+	        	<div class="col col-center ed-center" style="font-weight: bold; color: #fff">SIGN UP USING  <span style="color: #3765a3;"><i class="ion-social-facebook fb"></i></span> <span style="color: #3765a3;"> FACEBOOK</span></div>
+	        </div>
+	     
+</ion-content>
+
+</ion-modal-view>
+
